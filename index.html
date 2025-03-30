@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + JS</title>
+  </head>
+  <body>
+    <div class="turno-display">
+      <h1 class="numero-turno" id="turno">01</h1>
+      <p class="texto-turno">Por favor, acérquese al mostrador</p>
+    </div>
+    <div class="turno-display">
+      <button id="sig" onclick="siguiente()">Siguiente</button>
+      <button onclick="anterior()">Anterior</button>
+      <button onclick="reset()">Reset</button>
+      <input type="number" name="turnoCaja" id="cajaTurno" min="0" max="99" placeholder="Nº del 0 al 99" oninput="turnoInput(this.value)">
+    </div>
+    
+    <script src="./src/main.js"></script>
+  </body>
+</html>
