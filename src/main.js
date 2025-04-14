@@ -1,5 +1,9 @@
 const turno = document.getElementById("turno");
 
+const btnSiguiente = document.getElementById('sig');
+const btnAnterior = document.getElementById('btnAnterior');
+const btnReset = document.getElementById('btnReset');
+
 // JavaScript version of: (unsigned)
 // printf "%0*d" width num
 function leftFillNum(numero, targetLength) {
@@ -17,7 +21,6 @@ function ponerNumero(){
         turno.innerText = num;
     }
 }
-ponerNumero();
 
 function siguiente(){
     if (num < 99){
@@ -44,3 +47,23 @@ function turnoInput(valor){
         ponerNumero();
     }
 }
+
+if (btnSiguiente !== null && btnSiguiente !== undefined) {
+    btnSiguiente.addEventListener('click', () => {
+        siguiente();
+    })
+}
+if (btnAnterior !== null && btnAnterior !== undefined) {
+    btnAnterior.addEventListener('click', () => {
+        anterior();
+    })
+}
+if (btnReset !== null && btnReset !== undefined) {
+    btnReset.addEventListener('click', () => {
+        reset();
+    })
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    ponerNumero();
+});
